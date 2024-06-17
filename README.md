@@ -199,5 +199,8 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 ## 9. Install Boolector
 `brew install boolector`
 
+## 10. Run tests
+Within the Lakeroad directory (e.g. `./lakeroad`), run the command: `./run-tests.sh`
+
 
 

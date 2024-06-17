@@ -220,8 +220,16 @@ so that it looks like:
 
 `#for f in $SCRIPT_DIR/racket/*.rkt; do time raco test $f; done`
 
+## 12. Install Yices
+`sudo add-apt-repository ppa:sri-csl/formal-methods`
+
+`sudo apt-get update`
+
+`sudo apt-get install yices2`
+
 ## Installation Notes
 1. If Bitwuzla wasn't installed correctly, `./run-tests.sh` will fail when running the test for `./lakeroad/racket/lattice-end-to-end.rkt`
 
 2. The test for `./lakeroad/racket/sketches.rkt` can take a LONG time (hours)
 
+3. If you are running into issues when doing the integration tests and everything is erroring, re-clone the repository and re-run `./run-tests.sh`

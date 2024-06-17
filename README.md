@@ -179,8 +179,10 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 ## 3. Install Homebrew 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
         
-## 4. Install YAML
-`raco pkg install yaml`
+## 4. Install Racket
+`sudo add-apt-repository ppa:plt/racket`
+
+`sudo apt update`
 
 ## 5. Install Rosette
 `raco pkg install rosette`
@@ -191,10 +193,8 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 ## 7. Install Yosys
 `brew install yosys`
 
-## 8. Install Racket
-`sudo add-apt-repository ppa:plt/racket`
-
-`sudo apt update`
+## 8. Install YAML
+`raco pkg install yaml`
 
 ## 9. Install Boolector
 `brew install boolector`

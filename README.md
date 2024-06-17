@@ -145,4 +145,59 @@ TODO(@gussmith23): Find better cross-platform regex. I thought Perl might be the
 
 Lakeroad is usable via a Yosys plugin, which can be built separately and loaded directly into your existing Yosys installation. The plugin is located in [./yosys-plugin/](./yosys-plugin/) and can be built using the Makefile in that directory. The plugin can be loaded into Yosys using Yosys's `-m` option, e.g. `yosys -m lakeroad.so ...`. An example of this can be seen in [this integration test.](./integration_tests/lakeroad/xilinx_muladd_0_stage_signed_8_bit_yosys_plugin.sv)
 
+
 Note: the Lakeroad plugin needs to be built in the same environment (i.e. same glibc version) as the Yosys executable it's being loaded into. This can be an issue e.g. when using the Yosys executable in `oss-cad-suite`. The easiest way to prevent this is to build Yosys yourself using their directions.
+
+
+-------------------------
+# Getting Started
+## 0. Clone repository and navigate to directory
+`git clone https://github.com/uwsampl/lakeroad.git`
+
+`cd lakeroad`
+
+## 1. Install LLVM
+Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
+
+## 2. Install Bitwuzla
+#### Clone Bitwuzla repository
+`git clone https://github.com/bitwuzla/bitwuzla`
+`cd bitwuzla`
+#### Configure Bitwuzla release build
+
+`./configure.py`
+#### Build & Install
+
+`cd build && ninja install`
+#### Locate the Bitwuzla binary
+`cd src/main`
+#### Copy the Bitwuzla binary into Rosette's binaries
+`cp bitwuzla ~/.racket/8.6/pkgs/rosette/bin`
+
+`# Replace ~/.racket/8.6/... (Replace 8.6 with X.Y, where X.Y corresponds to your own installed Racket version number)`
+
+## 3. Install Racket
+`sudo add-apt-repository ppa:plt/racket`
+
+`sudo apt update`
+        
+## 4. Install YAML
+`raco pkg install yaml`
+
+## 5. Install Rosette
+`raco pkg install rosette`
+
+## 6. Install Verilator
+`apt-get install verilator   # On Ubuntu`
+
+## 7. Install Yosys
+`sudo apt-get install yosys`
+
+## 8. Install Homebrew 
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+## 9. Install Boolector
+`brew install boolector`
+
+
+

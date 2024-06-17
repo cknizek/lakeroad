@@ -239,6 +239,10 @@ so that it looks like:
 
 `sudo make install`
 
+`cd ./build/x86_64-pc-linux-gnu-release/bin`
+
+`cp -a /bin/. /home/nova/.racket/8.6/pkgs/rosette/bin/`
+
 ## 13. Install CVC5
 `git clone https://github.com/cvc5/cvc5.git`
 
@@ -253,6 +257,18 @@ so that it looks like:
 `cd bin`
 
 `cp cvc5 /home/nova/.racket/8.6/pkgs/rosette/bin/`
+
+## 14. Make Yosys plugin
+
+In the lakeroad directory ...
+`cd ./yosys-plugin`
+
+#### Install boost
+`apt-get install libboost-filesystem-dev`
+
+`brew install boost`
+
+`cd .. # return to main lakeroad directory`
 
 ## Installation Notes
 1. If Bitwuzla wasn't installed correctly, `./run-tests.sh` will fail when running the test for `./lakeroad/racket/lattice-end-to-end.rkt`

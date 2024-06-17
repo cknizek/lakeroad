@@ -263,6 +263,8 @@ so that it looks like:
 In the lakeroad directory ...
 `cd ./yosys-plugin`
 
+`make`
+
 ## 15. Install boost
 `apt-get install libboost-filesystem-dev`
 

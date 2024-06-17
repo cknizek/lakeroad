@@ -199,8 +199,29 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 ## 9. Install Boolector
 `brew install boolector`
 
-## 10. Run tests
+## 10. Install lit
+`pip install lit`
+
+## 11a. Run all tests
+
+_Running all of the tests may take a very long time (the Racket tests take particularly long)_
+
 Within the Lakeroad directory (e.g. `./lakeroad`), run the command: `./run-tests.sh`
 
+## 11b. Only integration tests
 
+_Running only the integration tests will take comparatively less time_
+
+Using a text editor (vim, nano, sublime-text, etc), open `run-tests.sh` and comment out the line:
+
+`for f in $SCRIPT_DIR/racket/*.rkt; do time raco test $f; done`
+
+so that it looks like:
+
+`#for f in $SCRIPT_DIR/racket/*.rkt; do time raco test $f; done`
+
+## Installation Notes
+1. If Bitwuzla wasn't installed correctly, `./run-tests.sh` will fail when running the test for `./lakeroad/racket/lattice-end-to-end.rkt`
+
+2. The test for `./lakeroad/racket/sketches.rkt` can take a LONG time (hours)
 

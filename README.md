@@ -241,7 +241,7 @@ so that it looks like:
 
 `cd ./build/x86_64-pc-linux-gnu-release/bin`
 
-`cp -a /bin/. /home/nova/.racket/8.6/pkgs/rosette/bin/`
+`cp -a /bin/. /home/YOUR_USERNAME/.racket/8.6/pkgs/rosette/bin/`
 
 ## 13. Install CVC5
 `git clone https://github.com/cvc5/cvc5.git`
@@ -256,7 +256,7 @@ so that it looks like:
 
 `cd bin`
 
-`cp cvc5 /home/nova/.racket/8.6/pkgs/rosette/bin/`
+`cp cvc5 /home/YOUR_USERNAME/.racket/8.6/pkgs/rosette/bin/`
 
 ## 14. Make Yosys plugin
 

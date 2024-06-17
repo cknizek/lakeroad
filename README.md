@@ -191,7 +191,7 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 `apt-get install verilator   # On Ubuntu`
 
 ## 7. Install Yosys
-`sudo apt-get install yosys`
+`brew install yosys`
 
 ## 8. Install Homebrew 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`

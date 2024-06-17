@@ -176,13 +176,13 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 
 `# Replace ~/.racket/8.6/... (Replace 8.6 with X.Y, where X.Y corresponds to your own installed Racket version number)`
 
-## 3. Install Racket
+## 3. Install Homebrew 
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+        
+## 4. Install Racket
 `sudo add-apt-repository ppa:plt/racket`
 
 `sudo apt update`
-        
-## 4. Install YAML
-`raco pkg install yaml`
 
 ## 5. Install Rosette
 `raco pkg install rosette`
@@ -193,8 +193,8 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 ## 7. Install Yosys
 `brew install yosys`
 
-## 8. Install Homebrew 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+## 8. Install YAML
+`raco pkg install yaml`
 
 ## 9. Install Boolector
 `brew install boolector`
@@ -202,25 +202,7 @@ Refer to the [LLVM Installation Guide](https://apt.llvm.org/)
 ## 10. Install lit
 `pip install lit`
 
-## 11a. Run all tests
-
-_Running all of the tests may take a very long time (the Racket tests take particularly long)_
-
-Within the Lakeroad directory (e.g. `./lakeroad`), run the command: `./run-tests.sh`
-
-## 11b. Only integration tests
-
-_Running only the integration tests will take comparatively less time_
-
-Using a text editor (vim, nano, sublime-text, etc), open `run-tests.sh` and comment out the line:
-
-`for f in $SCRIPT_DIR/racket/*.rkt; do time raco test $f; done`
-
-so that it looks like:
-
-`#for f in $SCRIPT_DIR/racket/*.rkt; do time raco test $f; done`
-
-## 12. Install Yices
+## 11. Install Yices
 `sudo add-apt-repository ppa:sri-csl/formal-methods`
 
 `sudo apt-get update`
@@ -243,7 +225,7 @@ so that it looks like:
 
 `cp -a /bin/. /home/YOUR_USERNAME/.racket/8.6/pkgs/rosette/bin/`
 
-## 13. Install CVC5
+## 12. Install CVC5
 `git clone https://github.com/cvc5/cvc5.git`
 
 `cd cvc5`
@@ -258,27 +240,46 @@ so that it looks like:
 
 `cp cvc5 /home/YOUR_USERNAME/.racket/8.6/pkgs/rosette/bin/`
 
-## 14. Make Yosys plugin
+## 13. Make Yosys plugin
 
 In the lakeroad directory ...
 `cd ./yosys-plugin`
 
 `make`
 
-## 15. Install boost
+## 14. Install boost
 `apt-get install libboost-filesystem-dev`
 
 `brew install boost`
 
 `cd .. # return to main lakeroad directory`
 
-## 16. Install stp
+## 15. Install stp
 `brew install stp`
+
+
+## Run all tests
+
+_Running all of the tests may take a very long time (the Racket tests take particularly long)_
+
+Within the Lakeroad directory (e.g. `./lakeroad`), run the command: `./run-tests.sh`
+
+## Run only integration tests
+
+_Running only the integration tests will take comparatively less time_
+
+Using a text editor (vim, nano, sublime-text, etc), open `run-tests.sh` and comment out the line:
+
+`for f in $SCRIPT_DIR/racket/*.rkt; do time raco test $f; done`
+
+so that it looks like:
+
+`#for f in $SCRIPT_DIR/racket/*.rkt; do time raco test $f; done`
 
 
 ## Installation Notes
 1. If Bitwuzla wasn't installed correctly, `./run-tests.sh` will fail when running the test for `./lakeroad/racket/lattice-end-to-end.rkt`
 
-2. The test for `./lakeroad/racket/sketches.rkt` can take a LONG time (hours)
+2. The test for `./lakeroad/racket/sketches.rkt` can take a long time
 
 3. If you are running into issues when doing the integration tests and everything is erroring, re-clone the repository and re-run `./run-tests.sh`

@@ -227,6 +227,21 @@ so that it looks like:
 
 `sudo apt-get install yices2`
 
+## 13. Install CVC5
+`git clone https://github.com/cvc5/cvc5.git`
+
+`cd cvc5`
+
+`./configure.sh --auto-download # Make sure you have cmake installed`
+
+`cd build`
+
+`make`
+
+`cd bin`
+
+`cp cvc5 /home/nova/.racket/8.6/pkgs/rosette/bin/`
+
 ## Installation Notes
 1. If Bitwuzla wasn't installed correctly, `./run-tests.sh` will fail when running the test for `./lakeroad/racket/lattice-end-to-end.rkt`
 

@@ -263,12 +263,16 @@ so that it looks like:
 In the lakeroad directory ...
 `cd ./yosys-plugin`
 
-#### Install boost
+## 15. Install boost
 `apt-get install libboost-filesystem-dev`
 
 `brew install boost`
 
 `cd .. # return to main lakeroad directory`
+
+## 16. Install stp
+`brew install stp`
+
 
 ## Installation Notes
 1. If Bitwuzla wasn't installed correctly, `./run-tests.sh` will fail when running the test for `./lakeroad/racket/lattice-end-to-end.rkt`

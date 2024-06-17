@@ -227,6 +227,18 @@ so that it looks like:
 
 `sudo apt-get install yices2`
 
+... or ...
+
+`git clone https://github.com/SRI-CSL/yices2.git`
+
+`autoconf`
+
+`./configure`
+
+`make`
+
+`sudo make install`
+
 ## 13. Install CVC5
 `git clone https://github.com/cvc5/cvc5.git`
 
